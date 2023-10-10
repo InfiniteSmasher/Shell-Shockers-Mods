@@ -7,46 +7,63 @@ This repository features shellshock.io mods that I chose to release publicly.
 // @name         Better Inventory | Shell Shockers
 // @version      4.0
 // @author       Infinite Smasher
-// @description  Inventory Upgrades - item search bar, new item themes, item randomizer, misc UI tweaks, and MOAR!
-// @icon         https://raw.githubusercontent.com/InfiniteSmasher/Shell-Shockers-Mods/main/ico_egg.png
-// @require      https://raw.githubusercontent.com/InfiniteSmasher/Shell-Shockers-Mods/main/inventory/htmlEdits.js
-// @match        https://shellshock.io
+// @description  Inventory Upgrades - new item themes, skin randomizer, UI improvements, and MOAR!
+// @icon         https://raw.githubusercontent.com/InfiniteSmasher/Better-Inventory/main/ico_egg.png
+// @require      https://raw.githubusercontent.com/InfiniteSmasher/Better-Inventory/main/htmlEdits.js
+// @match        *://shellshock.io/*
 // @run-at       document-end
 // ==/UserScript==
 
 (function() {
     let script = document.createElement('script');
-    script.src = 'https://raw.githubusercontent.com/InfiniteSmasher/Shell-Shockers-Mods/main/inventory/inventory.js';
+    script.src = 'https://cdn.jsdelivr.net/gh/InfiniteSmasher/Better-Inventory@latest/inventory.js';
     document.head.appendChild(script);
 
     let style = document.createElement('link');
     Object.assign(style, {
         rel: 'stylesheet',
-        href: 'https://raw.githubusercontent.com/InfiniteSmasher/Shell-Shockers-Mods/main/inventory/inventory.css'
+        href: 'https://cdn.jsdelivr.net/gh/InfiniteSmasher/Better-Inventory@latest/inventory.css'
     });
     document.head.appendChild(style);
 })();
 ```
 
-## Legacy Mode
+# Legacy Mode (Basic) | Shell Shockers
 ```js
 // ==UserScript==
 // @name         Legacy Mode | Shell Shockers
 // @version      3.0
 // @author       Infinite Smasher
-// @description  Old in-game sound effects and legacy default gun skins!
-// @icon         https://raw.githubusercontent.com//InfiniteSmasher/Shell-Shockers-Mods/main/ico_egg.png
-// @match        https://shellshock.io
+// @description  Go back in time with the old in-game sound effects (2018/2019) and legacy default gun skins!
+// @icon         https://raw.githubusercontent.com/InfiniteSmasher/Legacy-Mode/main/ico_egg.png
+// @match        *://shellshock.io/*
 // ==/UserScript==
 
 (function() {
-    let interval = setInterval(() => {
-        if (typeof(BAWK) === "undefined" || !BAWK.sounds || !Object.keys(BAWK.sounds)) return;
-        clearInterval(interval);
-        BAWK.load("https://raw.githubusercontent.com//InfiniteSmasher/Shell-Shockers-Mods/main/legacy/sounds.json");
-        extern.catalog.findItemsByIds([3000, 3100, 3400, 3600, 3800, 4000, 4200]).forEach(item => {
-            item.item_data.meshName += "_Legacy";
-        });
-    }, 200);
+    let script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/gh/InfiniteSmasher/Legacy-Mode@latest/legacy1.js';
+    document.head.appendChild(script);
 })();
+```
+
+# Legacy Mode (w/ SFX Settings Toggle) | Shell Shockers
+```js
+// ==UserScript==
+// @name         Legacy Mode (w/ SFX Toggle in Settings) | Shell Shockers
+// @version      4.0
+// @author       Infinite Smasher
+// @description  Go back in time with a settings toggle for the old in-game sound effects (2018/2019) and legacy default gun skins!
+// @icon         https://raw.githubusercontent.com/InfiniteSmasher/Legacy-Mode/main/ico_egg.png
+// @match        *://shellshock.io/*
+// ==/UserScript==
+
+(function() {
+    let script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/gh/InfiniteSmasher/Legacy-Mode@latest/legacy2.js';
+    document.head.appendChild(script);
+})();
+```
+
+# VIP Color Slider | Shell Shockers
+```js
 ```
