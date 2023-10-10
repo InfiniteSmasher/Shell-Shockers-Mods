@@ -1,5 +1,6 @@
 # Shell Shockers Mods
-This repository features shellshock.io mods that I chose to release publicly.
+This repository features some mods that I made for [Shell Shockers](https://shellshock.io). Enjoy!\
+(You'll need to install the [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) extension to use these scripts)
 
 ## Better Inventory
 ```js
