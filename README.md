@@ -29,7 +29,7 @@ This repository features some mods that I made for [Shell Shockers](https://shel
 })();
 ```
 
-# Legacy Mode (Basic)
+## Legacy Mode (Basic)
 ```js
 // ==UserScript==
 // @name         Legacy Mode | Shell Shockers
@@ -47,7 +47,7 @@ This repository features some mods that I made for [Shell Shockers](https://shel
 })();
 ```
 
-# Legacy Mode (w/ SFX Settings Toggle)
+## Legacy Mode (w/ SFX Settings Toggle)
 ```js
 // ==UserScript==
 // @name         Legacy Mode (w/ SFX Toggle in Settings) | Shell Shockers
@@ -65,12 +65,12 @@ This repository features some mods that I made for [Shell Shockers](https://shel
 })();
 ```
 
-# VIP Color Slider
+## VIP Color Slider
 ```js
 (Coming Soon!)
 ```
 
-# Hide HUD
+## Hide HUD
 ```js
 // ==UserScript==
 // @name         Hide HUD | Shell Shockers
