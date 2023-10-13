@@ -29,7 +29,7 @@ This repository features some mods that I made for [Shell Shockers](https://shel
 })();
 ```
 
-# Legacy Mode (Basic) | Shell Shockers
+# Legacy Mode (Basic)
 ```js
 // ==UserScript==
 // @name         Legacy Mode | Shell Shockers
@@ -47,7 +47,7 @@ This repository features some mods that I made for [Shell Shockers](https://shel
 })();
 ```
 
-# Legacy Mode (w/ SFX Settings Toggle) | Shell Shockers
+# Legacy Mode (w/ SFX Settings Toggle)
 ```js
 // ==UserScript==
 // @name         Legacy Mode (w/ SFX Toggle in Settings) | Shell Shockers
@@ -65,6 +65,26 @@ This repository features some mods that I made for [Shell Shockers](https://shel
 })();
 ```
 
-# VIP Color Slider | Shell Shockers
+# VIP Color Slider
 ```js
+(Coming Soon!)
+```
+
+# Hide HUD
+```js
+// ==UserScript==
+// @name         Hide HUD | Shell Shockers
+// @version      1.0
+// @author       Infinite Smasher
+// @description  Adds a toggle to hide the HUD elements (in-game/spectate UI)
+// @icon         https://raw.githubusercontent.com/InfiniteSmasher/Hide-HUD/main/ico_egg.png
+// @match        *://*shellshock.io/*
+// @run-at       document-end
+// ==/UserScript==
+
+(function() {
+    let script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/gh/InfiniteSmasher/Hide-HUD@latest/hideHud.js';
+    document.head.appendChild(script);
+})();
 ```
