@@ -1,8 +1,10 @@
 # Shell Shockers Mods
 This repository features some mods that I made for [Shell Shockers](https://shellshock.io). Enjoy!\
-(You'll need to install the [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) extension to use these scripts)
+(You'll need to install the [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) extension to use these mods)
 
-## Better Inventory
+<details open>
+<summary>Better Inventory</summary>
+
 ```js
 // ==UserScript==
 // @name         Better Inventory | Shell Shockers
@@ -11,7 +13,7 @@ This repository features some mods that I made for [Shell Shockers](https://shel
 // @description  Inventory Upgrades - new item themes, skin randomizer, UI improvements, and MOAR!
 // @icon         https://raw.githubusercontent.com/InfiniteSmasher/Better-Inventory/main/ico_egg.png
 // @require      https://raw.githubusercontent.com/InfiniteSmasher/Better-Inventory/main/htmlEdits.js
-// @match        *://shellshock.io/*
+// @match        *://*shellshock.io/*
 // @run-at       document-end
 // ==/UserScript==
 
@@ -28,8 +30,33 @@ This repository features some mods that I made for [Shell Shockers](https://shel
     document.head.appendChild(style);
 })();
 ```
+</details>
 
-## Legacy Mode (Basic)
+<details>
+<summary>Legacy Mode</summary>
+
+### Legacy Mode (w/ SFX Settings Toggle)
+> Legacy default weapon skins with a toggle for sound effects in the settings menu
+```js
+// ==UserScript==
+// @name         Legacy Mode (w/ SFX Toggle in Settings) | Shell Shockers
+// @version      4.0
+// @author       Infinite Smasher
+// @description  Go back in time with a settings toggle for the old in-game sound effects (2018/2019) and legacy default gun skins!
+// @icon         https://raw.githubusercontent.com/InfiniteSmasher/Legacy-Mode/main/ico_egg.png
+// @match        *://*shellshock.io/*
+// @run-at       document-body
+// ==/UserScript==
+
+(function() {
+    let script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/gh/InfiniteSmasher/Legacy-Mode@latest/legacy2.js';
+    document.head.appendChild(script);
+})();
+```
+    
+### Legacy Mode (Basic)
+> Legacy default weapon skins and sound effects - always on!
 ```js
 // ==UserScript==
 // @name         Legacy Mode | Shell Shockers
@@ -37,7 +64,7 @@ This repository features some mods that I made for [Shell Shockers](https://shel
 // @author       Infinite Smasher
 // @description  Go back in time with the old in-game sound effects (2018/2019) and legacy default gun skins!
 // @icon         https://raw.githubusercontent.com/InfiniteSmasher/Legacy-Mode/main/ico_egg.png
-// @match        *://shellshock.io/*
+// @match        *://*shellshock.io/*
 // @run-at       document-end
 // ==/UserScript==
 
@@ -48,31 +75,27 @@ This repository features some mods that I made for [Shell Shockers](https://shel
 })();
 ```
 
-## Legacy Mode (w/ SFX Settings Toggle)
-```js
-// ==UserScript==
-// @name         Legacy Mode (w/ SFX Toggle in Settings) | Shell Shockers
-// @version      4.0
-// @author       Infinite Smasher
-// @description  Go back in time with a settings toggle for the old in-game sound effects (2018/2019) and legacy default gun skins!
-// @icon         https://raw.githubusercontent.com/InfiniteSmasher/Legacy-Mode/main/ico_egg.png
-// @match        *://shellshock.io/*
-// @run-at       document-body
-// ==/UserScript==
+</details>
 
-(function() {
-    let script = document.createElement('script');
-    script.src = 'https://cdn.jsdelivr.net/gh/InfiniteSmasher/Legacy-Mode@latest/legacy2.js';
-    document.head.appendChild(script);
-})();
+<details>
+<summary>Egg Color Slider</summary>
+
+### Egg Color Slider (VIP-Exclusive)
+> Egg color slider in inventory (locked for non-VIPs)
+```js
+Coming Soon!
 ```
 
-## VIP Color Slider
+### Egg Color Slider (Unlocked)
+> Egg color slider in inventory (always unlocked!)
 ```js
-(Coming Soon!)
+Coming Soon!
 ```
+</details>
 
-## Hide HUD
+<details>
+<summary>Hide HUD</summary>
+
 ```js
 // ==UserScript==
 // @name         Hide HUD | Shell Shockers
@@ -90,3 +113,5 @@ This repository features some mods that I made for [Shell Shockers](https://shel
     document.head.appendChild(script);
 })();
 ```
+
+</details>
